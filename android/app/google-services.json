@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "341774355816",
+    "project_id": "payflow-feea4",
+    "storage_bucket": "payflow-feea4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:341774355816:android:92ce1d708a2a1c4e29dadd",
+        "android_client_info": {
+          "package_name": "com.example.payflow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "341774355816-micme5ad51galrfie8bsl9qcr76c4bn2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGhz9sTbuZnNIR5O4AMI7GbUhm-qoci9c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "341774355816-micme5ad51galrfie8bsl9qcr76c4bn2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
