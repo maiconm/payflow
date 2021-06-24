@@ -4,8 +4,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthController {
   
-  var _isAuthenticated = false;
-  
   UserModel? _user;
 
   UserModel get user => _user!;
@@ -16,14 +14,12 @@ class AuthController {
 
       _user = user;
 
-      _isAuthenticated = true;
+      saveUser(user);
 
       Navigator.pushReplacementNamed(context,  "/home");
 
     } else {
       
-      _isAuthenticated = false;
-
       Navigator.pushReplacementNamed(context, "/login");
 
     }
@@ -43,6 +39,8 @@ class AuthController {
   Future<void> hasCurrentUser(BuildContext context) async {
 
     final instance = await SharedPreferences.getInstance();
+
+    await Future.delayed(Duration(seconds: 2));
 
     if (instance.containsKey("user")) {
       
