@@ -13,6 +13,7 @@ class AppWidget extends StatelessWidget {
       title: 'Pay Flow',
       theme: ThemeData(
         primaryColor: AppColors.primary,
+        primarySwatch: Colors.orange,
       ),
       initialRoute: "/splash",
       routes: {
