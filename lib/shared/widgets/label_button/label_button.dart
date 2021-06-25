@@ -7,10 +7,13 @@ class LabelButton extends StatelessWidget {
 
   final VoidCallback onPressed;
 
+  final TextStyle? style;
+
   const LabelButton({
     Key? key,
     required this.label,
     required this.onPressed,
+    this.style,
   }) : super(key: key);
 
   @override
@@ -21,7 +24,7 @@ class LabelButton extends StatelessWidget {
         onPressed: onPressed,
         child: Text(
           label,
-          style: TextStyles.buttonHeading,
+          style: style ?? TextStyles.buttonHeading,
         ),
       ),
     );
