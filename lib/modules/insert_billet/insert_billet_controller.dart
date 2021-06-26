@@ -12,4 +12,22 @@ class InsertBilletController {
 
   String? validateBarcode(String? value) => value?.isEmpty ?? true ? "O código do boleto não pode ser vazio" : null;
 
+  void registerBillet() {
+
+    final form = formKey.currentState;
+
+    if (form!.validate()) {
+
+
+
+    }
+
+  }
+
+  void onChange({String? name, String? dueDate, double? value, String? bardode}) {
+
+    
+
+  }
+
 }
