@@ -17,44 +17,50 @@ class InsertBilletPage extends StatelessWidget {
         elevation: 0,
         leading: BackButton(color: AppColors.input,),
       ),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 93,
-              vertical: 24
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24),
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 70,
+                vertical: 24
+              ),
+              child: Text(
+                "Preencha os dados do boleto",
+                style: TextStyles.titleBoldHeading,
+                textAlign: TextAlign.center,
+              ),
             ),
-            child: Text(
-              "Preencha os dados do boleto",
-              style: TextStyles.titleBoldHeading,
-              textAlign: TextAlign.center,
+            SizedBox(height: 24,),
+            InputText(
+              label: "Nome do boleto",
+              icon: Icons.description_outlined,
+              onChanged: (value) {},
             ),
-          ),
-          InputText(
-            label: "Nome do boleto",
-            icon: Icons.description_outlined,
-            onChanged: (value) {},
-          ),
-          InputText(
-            label: "Vemcimento",
-            icon: FontAwesomeIcons.timesCircle,
-            onChanged: (value) {},
-          ),
-          InputText(
-            label: "Valor",
-            icon: FontAwesomeIcons.wallet,
-            onChanged: (value) {},
-          ),
-          InputText(
-            label: "Código",
-            icon: FontAwesomeIcons.barcode,
-            onChanged: (value) {},
-          ),
-        ],
+            InputText(
+              label: "Vemcimento",
+              icon: FontAwesomeIcons.timesCircle,
+              onChanged: (value) {},
+            ),
+            InputText(
+              label: "Valor",
+              icon: FontAwesomeIcons.wallet,
+              onChanged: (value) {},
+            ),
+            InputText(
+              label: "Código",
+              icon: FontAwesomeIcons.barcode,
+              onChanged: (value) {},
+            ),
+          ],
+        ),
       ),
       bottomNavigationBar: SetLabelButtons(
         primaryLabel: "Cancelar",
-        primaryOnPressed: (){},
+        primaryOnPressed: (){
+          Navigator.pop(context);
+        },
         secondaryLabel: "Cadastrar",
         secondaryOnPressed: (){},
         enableSecondaryColor: true,
