@@ -108,7 +108,7 @@ class _InsertBilletPageState extends State<InsertBilletPage> {
                       icon: FontAwesomeIcons.barcode,
                       validator: controller.validateBarcode,
                       onChanged: (value) {
-                        controller.onChange(bardode: value);
+                        controller.onChange(barcode: value);
                       },
                     ),
                   ],
@@ -124,8 +124,9 @@ class _InsertBilletPageState extends State<InsertBilletPage> {
           Navigator.pop(context);
         },
         secondaryLabel: "Cadastrar",
-        secondaryOnPressed: (){
-          controller.registerBillet();
+        secondaryOnPressed: () async {
+          await controller.registerBillet();
+          Navigator.pop(context);
         },
         enableSecondaryColor: true,
       ),
