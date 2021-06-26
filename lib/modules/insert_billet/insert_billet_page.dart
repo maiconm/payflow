@@ -31,18 +31,22 @@ class InsertBilletPage extends StatelessWidget {
           InputText(
             label: "Nome do boleto",
             icon: Icons.description_outlined,
+            onChanged: (value) {},
           ),
           InputText(
             label: "Vemcimento",
             icon: FontAwesomeIcons.timesCircle,
+            onChanged: (value) {},
           ),
           InputText(
             label: "Valor",
             icon: FontAwesomeIcons.wallet,
+            onChanged: (value) {},
           ),
           InputText(
             label: "Código",
             icon: FontAwesomeIcons.barcode,
+            onChanged: (value) {},
           ),
         ],
       ),

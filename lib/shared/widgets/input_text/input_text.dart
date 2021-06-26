@@ -7,10 +7,22 @@ class InputText extends StatelessWidget {
   final String label;
 
   final IconData icon;
+
+  final String? initialValue;
+
+  final String? Function(String?)? validator;
+
+  final TextEditingController? controller;
+
+  final void Function(String value) onChanged;
   
   const InputText({
     required this.label,
     required this.icon,
+    this.initialValue,
+    this.validator,
+    this.controller,
+    required this.onChanged,
     Key? key,
   }) : super(key: key);
 
@@ -21,6 +33,10 @@ class InputText extends StatelessWidget {
       child: Column(
         children: [
           TextFormField(
+            initialValue: initialValue,
+            validator: validator,
+            controller: controller,
+            onChanged: onChanged,
             style: TextStyles.input,
             decoration: InputDecoration(
               contentPadding: EdgeInsets.zero,
