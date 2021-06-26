@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:payflow/modules/insert_billet/insert_billet_page.dart';
 import 'package:payflow/modules/login/login_page.dart';
 import 'package:payflow/modules/splash/splash_page.dart';
 
@@ -9,12 +9,16 @@ import 'shared/themes/app_colors.dart';
 
 class AppWidget extends StatelessWidget {
 
-  AppWidget() {
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitDown,
-      DeviceOrientation.portraitUp,
-    ]);
-  }
+  // TODO:
+  // AppWidget() {
+  //   SystemChrome.setPreferredOrientations([
+  //     DeviceOrientation.portraitDown,
+  //     DeviceOrientation.portraitUp,
+  //   ]);
+
+  //   SystemChrome.setSystemUIOverlayStyle(
+  //       SystemUiOverlayStyle(statusBarColor: AppColors.primary));
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +30,8 @@ class AppWidget extends StatelessWidget {
       ),
       initialRoute: "/splash",
       routes: {
-        "/barcode_scanner": (context) => BarcpdeScannerPage(),
+        "/insert_billet": (context) => InsertBilletPage(),
+        "/barcode_scanner": (context) => BarcodeScannerPage(),
         "/home": (context) => HomePage(),
         "/login": (context) => LoginPage(),
         "/splash": (context) => SplashPage(),
