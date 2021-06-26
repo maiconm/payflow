@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
 import 'package:payflow/shared/themes/app_text_styles.dart';
 import 'package:payflow/shared/widgets/input_text/input_text.dart';
+import 'package:payflow/shared/widgets/set_label_buttons/set_label_buttons.dart';
 
 class InsertBilletPage extends StatelessWidget {
   const InsertBilletPage({ Key? key }) : super(key: key);
@@ -10,6 +11,7 @@ class InsertBilletPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.background,
       appBar: AppBar(
         backgroundColor: AppColors.background,
         elevation: 0,
@@ -49,6 +51,13 @@ class InsertBilletPage extends StatelessWidget {
             onChanged: (value) {},
           ),
         ],
+      ),
+      bottomNavigationBar: SetLabelButtons(
+        primaryLabel: "Cancelar",
+        primaryOnPressed: (){},
+        secondaryLabel: "Cadastrar",
+        secondaryOnPressed: (){},
+        enableSecondaryColor: true,
       ),
     );
   }
